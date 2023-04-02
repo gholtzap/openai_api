@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Salma Pro';
+    src: url('/static/fonts/salma-pro-font/SalmaproMedium-0Wooo.otf') format('woff2'),
+         url('/static/fonts/salma-pro-font/SalmaproMediumnarrow-VG5v6.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Salma Pro', Arial, sans-serif;
+}
+
+
+body {
+    font-family: 'Salma Pro', Arial, sans-serif;
+    background: linear-gradient(135deg, #5C258D 0%, #4389A2 100%);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #FAF9F6;
+    text-shadow: 0 0 10px #FAF9F6;
+    /*animation: glow 2s ease-in-out infinite alternate;*/
+    text-shadow: 0 0 10px #1F1F1F;
+} 
+
+.container {
+    max-width: 700px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+}
+
+.chat {
+    margin-bottom: 1.5rem;
+}
+
+.message {
+    margin-bottom: 0.5rem;
+}
+
+.user {
+    color: #1a73e8;
+}
+
+.system {
+    color: #ef6c00;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem; /* Increase padding for a larger button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.1rem; /* Increase font size */
+    width: 100%; /* Make the button as wide as the input field */
+}
+
+button[type="submit"]:hover {
+    background-color: #1460b9;
+}
+
+
+.tokens-tracker {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: rgba(26, 115, 232, 0.8);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #1F1F1F, 0 0 20px #1F1F1F, 0 0 30px #1F1F1F, 0 0 40px #1F1F1F;
+    }
+    100% {
+        text-shadow: 0 0 20px #FAF9F6, 0 0 30px #FAF9F6, 0 0 40px #FAF9F6, 0 0 50px #FAF9F6, 0 0 60px #FAF9F6;
+    }
+}

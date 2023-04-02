@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="main_title">ChatGPT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>ChatGPT</h1>
+    <div class="container">
+        <div class="chat">
+            {% for message in conversation %}
+                <p class="message"><strong class="{{ message.role }}">{{ message.role }}:</strong> {{ message.content }}</p>
+            {% endfor %}
+        </div>
+        <form method="POST">
+            <input type="text" name="user_input" placeholder="Type your message here" autofocus required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div class="tokens-tracker">
+        Tokens used: {{ total_tokens }}
+    </div>
+</body>
+</html>
